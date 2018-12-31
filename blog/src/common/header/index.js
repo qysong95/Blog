@@ -42,10 +42,10 @@ class Header extends Component {
           onMouseLeave={handleMouseLeave}
         >
           <SearchInfoTitle>
-            热门搜索
+            Search
             <SearchInfoSwitch onClick={() => handleChangePage(page, totalPage, this.spinIcon)}>
               <i ref={(icon) => { this.spinIcon = icon }} className="iconfont spin">&#xe851;</i>
-              换一批
+              change
             </SearchInfoSwitch>
           </SearchInfoTitle>
           <SearchInfoList>
@@ -66,12 +66,12 @@ class Header extends Component {
           <Logo />
         </Link>
         <Nav>
-          <NavItem className='left active'>首页</NavItem>
-          <NavItem className='left'>下载App</NavItem>
+          <NavItem className='left active'>Home</NavItem>
+          <NavItem className='left'>Download App</NavItem>
           {
             login ?
-              <NavItem onClick={logout} className='right'>退出</NavItem> :
-              <Link to='/login'><NavItem className='right'>登录</NavItem></Link>
+              <NavItem onClick={logout} className='right'>Logout</NavItem> :
+              <Link to='/login'><NavItem className='right'>Login</NavItem></Link>
           }
           <NavItem className='right'>
             <i className="iconfont">&#xe636;</i>
@@ -98,10 +98,10 @@ class Header extends Component {
           <Link to='/write'>
             <Button className='writting'>
               <i className="iconfont">&#xe615;</i>
-              写文章
+              Write
           </Button>
           </Link>
-          <Button className='reg'>注册</Button>
+          <Button className='reg'>Sign up</Button>
         </Addition>
       </HeaderWrapper>
     )
